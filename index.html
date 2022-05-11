@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics 시작 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JT14MXF0QZ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-JT14MXF0QZ");
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics 끝 -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <meta
+      name="naver-site-verification"
+      content="bed27e88092722f9b019cfc796a1212fa148691d"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://pi.wookingwoo.com" />
+
+    <meta
+      name="subject"
+      content="pi, pi full number, 파이, 원주율, 원주율 전체, 원주율 무한"
+    />
+    <meta
+      name="keywords"
+      content="pi, pi full number, 파이, 원주율, 원주율 전체, 원주율 무한"
+    />
+    <meta name="author" content="wookingwoo" />
+    <meta name="reply-to" content="contact@wookingwoo.com" />
+    <meta name="content-language" content="en-us" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <link
+      rel="shortcut icon"
+      href="https://wookingwoo-logo.s3.ap-northeast-2.amazonaws.com/ico/mainIcon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="https://wookingwoo-logo.s3.ap-northeast-2.amazonaws.com/ico/mainIcon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="wookingwoo-pi" />
+    <meta property="og:description" content="1 Million digits of Pi" />
+
+    <meta property="og:url" content="https://pi.wookingwoo.com" />
+
+    <title>wookingwoo-pi</title>
+    <meta name="description" content="1 Million digits of Pi" />
+  </head>
+
+  <body>
+    <div id="pi_div" style="width: 100%; word-wrap: break-word">loading..</div>
+  </body>
+
+  <script>
+    fetch("row_pi.txt")
+      .then((response) => response.text())
+      .then((pi_value) => {
+        var element = document.getElementById("pi_div");
+        element.innerText = pi_value;
+      });
+  </script>
+</html>
